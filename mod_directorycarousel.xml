@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Folder Carousel</name>
+    <creationDate>June 2020</creationDate>
+    <author>Tom F. Vanbrabant</author>
+    <authorEmail>vanbrabant.tom@gmail.com</authorEmail>
+    <authorUrl>https://github.com/TVBZ/mod_directorycarousel</authorUrl>
+    <version>1.0.0</version>
+    <description>A lightweight carousel module to display images from designated folder.</description>
+    <files>
+        <filename>mod_directorycarousel.xml</filename>
+        <filename module="mod_directorycarousel">mod_directorycarousel.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <folder>helpers</folder>
+    </files>
+    <updateservers>
+        <server type="extension" priority="1" name="Directory Carousel">https://github.com/TVBZ/mod_directorycarousel/blob/master/version.xml</server>
+    </updateservers>
+    <config>
+        <fields name="params">
+		<fieldset name="basic">
+              <field
+                    name="path"
+                    type="text"
+                    required="true"
+                    label="Folder"
+                    description='Set the directory relative to website root folder, without starting and trailing /. (e.g. "images/projects")'
+                    default="modules/mod_directorycarousel/assets/img"
+              />
+
+              <field
+                    name="filetypes"
+                    type="text"
+                    required="true"
+                    label="Image types"
+                    description='Set the accepted image extensions, separated by pipe character. (e.g. "jpg|png|gif")'
+                    default="jpe?g|png|webp|gif|tiff|bmp"
+              />
+
+              <field 
+                    name="sort" 
+                    type="list" 
+                    default="0" 
+                    label="Sort images" 
+                    description="0">
+                     <option value="0">Ascending (A-Z)</option>
+                     <option value="1">Descending (Z-A)</option>
+              </field>
+
+              <field 
+                     name="lazyload" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="1" 
+                     label="Lazyload" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+              <field 
+                     name="spacer1"
+                     type="spacer"
+                     hr="true"
+                     label=""/>
+
+              <field
+                    name="items"
+                    type="number"
+                    required="true"
+                    filter="integer"
+                    label="Items"
+                    description=""
+                    default="4"
+                    min="1"
+                    step="1"
+               />
+
+              <field
+                    name="startposition"
+                    type="number"
+                    required="true"
+                    filter="integer"
+                    label="Start position"
+                    description=""
+                    default="1"
+                    min="0"
+                    step="1"
+               />
+
+               <field
+                    name="slideby"
+                    type="number"
+                    required="true"
+                    filter="integer"
+                    label="Slide by"
+                    description=""
+                    default="1"
+                    min="1"
+                    step="1"
+               />               
+
+               <field
+                    name="margin"
+                    type="number"
+                    required="true"
+                    filter="integer"
+                    label="Margin"
+                    description=""
+                    default="1"
+                    min="0"
+                    step="1"
+               />
+
+               <field
+                    name="stagepadding"
+                    type="number"
+                    required="true"
+                    filter="integer"
+                    label="Stage padding"
+                    description=""
+                    default="0"
+                    min="0"
+                    step="1"
+               />              
+
+               <field 
+                     name="loop" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="1" 
+                     label="Loop" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+              <field 
+                     name="rewind" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="1" 
+                     label="Rewind" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+               <field 
+                     name="autowidth" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="0" 
+                     label="Auto width" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+               <field 
+                     name="autoheight" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="0" 
+                     label="Auto height" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+              <field 
+                     name="nav" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="0" 
+                     label="Show nav" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+               <field 
+                     name="dots" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="1" 
+                     label="Show dots" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+               <field 
+                     name="center" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="1" 
+                     label="Center" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+               <field 
+                     name="spacer2"
+                     type="spacer"
+                     hr="true"
+                     label=""/>
+
+               <field 
+                     name="autoplay" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="0" 
+                     label="Autoplay" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+               <field
+                    name="autoplaytimeout"
+                    type="text"
+                    required="true"
+                    filter="integer"
+                    label="Autoplay time out"
+                    description=""
+                    default="5000"
+               />
+
+               <field
+                    name="smartspeed"
+                    type="text"
+                    required="true"
+                    filter="integer"
+                    label="Slide speed"
+                    description=""
+                    default="500"
+               />
+
+               <field 
+                     name="autoplayhoverpause" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="0" 
+                     label="Pause on hover" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>       
+
+               <field 
+                     name="touchdrag" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="1" 
+                     label="Touch drag" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+               
+               <field 
+                     name="mousedrag" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="1" 
+                     label="Mouse drag" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+               <field 
+                     name="pulldrag" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="1" 
+                     label="Pull drag" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+               <field 
+                     name="freedrag" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="0" 
+                     label="Free drag" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+               <field 
+                     name="spacer3"
+                     type="spacer"
+                     hr="true"
+                     label=""/>
+
+              <field 
+                     name="isresponsive" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="0" 
+                     label="Responsive" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
+              <field 
+                     name="responsive" 
+                     type="textarea"
+                     default='{"0":{"items":"1"},"400":{"items":"2"}}' 
+                     label="Responsive settings (JSON)" 
+                     description="" 
+                     cols="50" 
+                     rows="10"
+                     filter="string" 
+              />
+
+            </fieldset>
+            
+       </fields>
+    </config>
+</extension>
