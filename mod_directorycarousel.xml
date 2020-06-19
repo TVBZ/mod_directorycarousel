@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>Folder Carousel</name>
+    <description>A lightweight carousel module to display images from designated folder.</description>
+    <version>1.0.0</version>
     <creationDate>June 2020</creationDate>
     <author>Tom F. Vanbrabant</author>
     <authorEmail>vanbrabant.tom@gmail.com</authorEmail>
     <authorUrl>https://github.com/TVBZ/mod_directorycarousel</authorUrl>
-    <version>1.0.0</version>
-    <description>A lightweight carousel module to display images from designated folder.</description>
+    <creationDate>June 2020</creationDate>
+    <copyright>Tom F. Vanbrabant</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl.html</license>
     <files>
         <filename>mod_directorycarousel.xml</filename>
         <filename module="mod_directorycarousel">mod_directorycarousel.php</filename>
