@@ -16,7 +16,7 @@
         <folder>helpers</folder>
     </files>
     <updateservers>
-        <server type="extension" priority="1" name="Directory Carousel">https://github.com/TVBZ/mod_directorycarousel/blob/master/version.xml</server>
+        <server type="extension" priority="1" name="Directory Carousel">https://github.com/TVBZ/mod_directorycarousel/blob/master/update.xml</server>
     </updateservers>
     <config>
         <fields name="params">
