@@ -6,15 +6,15 @@
 
 
 // Get module params
-const moduleSettings = Joomla.getOptions('mod_directorycarousel');
+const dcModuleSettings = Joomla.getOptions('mod_directorycarousel');
 
 jQuery(document).ready(function() {
 
     // Loop over each module
-    const modules = Object.keys(moduleSettings);
-    for (const id of modules) {
+    const dcModules = Object.keys(dcModuleSettings);
+    for (const id of dcModules) {
 
-        const params = moduleSettings[id];
+        const params = dcModuleSettings[id];
         const target = "#owl-carousel-" + id; 
 
         // Callback to evaluate true/false params
