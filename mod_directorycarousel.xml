@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.1.0" client="site" method="upgrade">
-    <name>Directory Carousel</name>
-    <description>A lightweight carousel module to display images from designated folder.</description>
-    <version>1.0.0</version>
+    <name>MOD_DIRECTORYCAROUSEL</name>
+    <description>MOD_DIRECTORYCAROUSEL_DESC</description>
+    <version>1.1.0</version>
     <creationDate>June 2020</creationDate>
     <author>Tom F. Vanbrabant</author>
     <authorEmail>vanbrabant.tom@gmail.com</authorEmail>
@@ -17,7 +17,12 @@
         <folder>tmpl</folder>
         <folder>assets</folder>
         <folder>helpers</folder>
+        <folder>language</folder>
     </files>
+    <languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_directorycarousel.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_directorycarousel.sys.ini</language>
+	</languages>
     <updateservers>
         <server type="extension" priority="1" name="Directory Carousel">https://github.com/TVBZ/mod_directorycarousel/blob/master/update.xml</server>
     </updateservers>
@@ -28,8 +33,8 @@
                     name="path"
                     type="text"
                     required="true"
-                    label="Folder"
-                    description='Set the directory relative to website root folder, without starting and trailing /. (e.g. "images/projects")'
+                    label="MOD_DIRECTORYCAROUSEL_DIRECTORY"
+                    description="MOD_DIRECTORYCAROUSEL_DIRECTORY_DESC"
                     default="modules/mod_directorycarousel/assets/img"
               />
 
@@ -37,8 +42,8 @@
                     name="filetypes"
                     type="text"
                     required="true"
-                    label="Image types"
-                    description='Set the accepted image extensions, separated by pipe character. (e.g. "jpg|png|gif")'
+                    label="MOD_DIRECTORYCAROUSEL_IMG_TYPES"
+                    description="MOD_DIRECTORYCAROUSEL_IMG_TYPES_DESC"
                     default="jpe?g|png|webp|gif|tiff|bmp"
               />
 
@@ -46,8 +51,8 @@
                     name="sort" 
                     type="list" 
                     default="0" 
-                    label="Sort images" 
-                    description="0">
+                    label="MOD_DIRECTORYCAROUSEL_SORT" 
+                    description="MOD_DIRECTORYCAROUSEL_SORT_DESC">
                      <option value="0">Ascending (A-Z)</option>
                      <option value="1">Descending (Z-A)</option>
               </field>
@@ -58,8 +63,8 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="1" 
-                     label="Lazyload" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_LAZYLOAD" 
+                     description="MOD_DIRECTORYCAROUSEL_LAZYLOAD_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
@@ -75,8 +80,8 @@
                     type="number"
                     required="true"
                     filter="integer"
-                    label="Items"
-                    description=""
+                    label="MOD_DIRECTORYCAROUSEL_ITEMS"
+                    description="MOD_DIRECTORYCAROUSEL_ITEMS_DESC"
                     default="4"
                     min="1"
                     step="1"
@@ -87,10 +92,10 @@
                     type="number"
                     required="true"
                     filter="integer"
-                    label="Start position"
-                    description=""
+                    label="MOD_DIRECTORYCAROUSEL_START_POSITION"
+                    description="MOD_DIRECTORYCAROUSEL_START_POSITION_DESC"
                     default="1"
-                    min="0"
+                    min="1"
                     step="1"
                />
 
@@ -99,8 +104,8 @@
                     type="number"
                     required="true"
                     filter="integer"
-                    label="Slide by"
-                    description=""
+                    label="MOD_DIRECTORYCAROUSEL_SLIDEBY"
+                    description="MOD_DIRECTORYCAROUSEL_SLIDEBY_DESC"
                     default="1"
                     min="1"
                     step="1"
@@ -111,8 +116,8 @@
                     type="number"
                     required="true"
                     filter="integer"
-                    label="Margin"
-                    description=""
+                    label="MOD_DIRECTORYCAROUSEL_MARGIN"
+                    description="MOD_DIRECTORYCAROUSEL_MARGIN_DESC"
                     default="1"
                     min="0"
                     step="1"
@@ -123,8 +128,8 @@
                     type="number"
                     required="true"
                     filter="integer"
-                    label="Stage padding"
-                    description=""
+                    label="MOD_DIRECTORYCAROUSEL_STAGEPADDING"
+                    description="MOD_DIRECTORYCAROUSEL_STAGEPADDING_DESC"
                     default="0"
                     min="0"
                     step="1"
@@ -136,8 +141,8 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="1" 
-                     label="Loop" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_LOOP" 
+                     description="MOD_DIRECTORYCAROUSEL_LOOP_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
@@ -148,8 +153,8 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="1" 
-                     label="Rewind" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_REWIND" 
+                     description="MOD_DIRECTORYCAROUSEL_REWIND_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
@@ -160,8 +165,8 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="0" 
-                     label="Auto width" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_AUTOWIDTH" 
+                     description="MOD_DIRECTORYCAROUSEL_AUTOWIDTH_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
@@ -172,8 +177,8 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="0" 
-                     label="Auto height" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_AUTOHEIGHT" 
+                     description="MOD_DIRECTORYCAROUSEL_AUTOHEIGHT_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
@@ -184,8 +189,8 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="0" 
-                     label="Show nav" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_NAV" 
+                     description="MOD_DIRECTORYCAROUSEL_NAV_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
@@ -196,8 +201,8 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="1" 
-                     label="Show dots" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_DOTS" 
+                     description="MOD_DIRECTORYCAROUSEL_DOTS_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
@@ -208,8 +213,8 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="1" 
-                     label="Center" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_CENTER" 
+                     description="MOD_DIRECTORYCAROUSEL_CENTER_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
@@ -226,8 +231,8 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="0" 
-                     label="Autoplay" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_AUTOPLAY" 
+                     description="MOD_DIRECTORYCAROUSEL_AUTOPLAY_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
@@ -237,8 +242,8 @@
                     type="text"
                     required="true"
                     filter="integer"
-                    label="Autoplay time out"
-                    description=""
+                    label="MOD_DIRECTORYCAROUSEL_AUTOPLAY_TIMEOUT"
+                    description="MOD_DIRECTORYCAROUSEL_AUTOPLAY_TIMEOUT_DESC"
                     default="5000"
                />
 
@@ -247,8 +252,8 @@
                     type="text"
                     required="true"
                     filter="integer"
-                    label="Slide speed"
-                    description=""
+                    label="MOD_DIRECTORYCAROUSEL_AUTOPLAY_SMARTSPEED"
+                    description="MOD_DIRECTORYCAROUSEL_AUTOPLAY_SMARTSPEED_DESC"
                     default="500"
                />
 
@@ -258,8 +263,8 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="0" 
-                     label="Pause on hover" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_AUTOPLAY_PAUSEONHOVER" 
+                     description="MOD_DIRECTORYCAROUSEL_AUTOPLAY_PAUSEONHOVER_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>       
@@ -270,8 +275,8 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="1" 
-                     label="Touch drag" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_TOUCHDRAG" 
+                     description="MOD_DIRECTORYCAROUSEL_TOUCHDRAG_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
@@ -282,20 +287,21 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="1" 
-                     label="Mouse drag" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_MOUSEDRAG" 
+                     description="MOD_DIRECTORYCAROUSEL_MOUSEDRAG_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
 
+               <!--
                <field 
                      name="pulldrag" 
                      type="radio" 
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="1" 
-                     label="Pull drag" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_PULLDRAG" 
+                     description="MOD_DIRECTORYCAROUSEL_PULLDRAG_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
@@ -306,11 +312,12 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="0" 
-                     label="Free drag" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_FREEDRAG" 
+                     description="MOD_DIRECTORYCAROUSEL_FREEDRAG_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
+               -->
 
                <field 
                      name="spacer3"
@@ -324,8 +331,8 @@
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="0" 
-                     label="Responsive" 
-                     description="">
+                     label="MOD_DIRECTORYCAROUSEL_RESPONSIVE" 
+                     description="MOD_DIRECTORYCAROUSEL_RESPONSIVE_DESC">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
                </field>
@@ -334,12 +341,20 @@
                      name="responsive" 
                      type="textarea"
                      default='{"0":{"items":"1"},"400":{"items":"2"}}' 
-                     label="Responsive settings (JSON)" 
-                     description="" 
+                     label="MOD_DIRECTORYCAROUSEL_RESPONSIVE_SETTINGS" 
+                     description="MOD_DIRECTORYCAROUSEL_RESPONSIVE_SETTINGS_DESC" 
                      cols="50" 
                      rows="10"
                      filter="string" 
+                     showon="isresponsive:1"
               />
+
+              <field 
+                     name="responsivedocs"
+                     label="MOD_DIRECTORYCAROUSEL_RESPONSIVE_SETTINGS_DOCUMENTATION"
+                     type="spacer"
+                     hr="false"
+                     showon="isresponsive:1"/>
 
             </fieldset>
             
