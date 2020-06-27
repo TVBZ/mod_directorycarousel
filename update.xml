@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <updates>
 	<update>
 		<name>Directory Carousel</name>
-		<description>Added better field descriptions and use Joomla! language system.</description>
+		<description>A lightweight carousel module to display images from designated folder.</description>
 		<element>mod_directorycarousel</element>
 		<type>module</type>
 		<version>1.1.0</version>
