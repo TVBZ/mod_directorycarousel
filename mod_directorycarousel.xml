@@ -2,7 +2,7 @@
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>MOD_DIRECTORYCAROUSEL</name>
     <description>MOD_DIRECTORYCAROUSEL_DESC</description>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <creationDate>June 2020</creationDate>
     <author>Tom F. Vanbrabant</author>
     <authorEmail>vanbrabant.tom@gmail.com</authorEmail>
@@ -22,6 +22,8 @@
     <languages>
 		<language tag="en-GB">language/en-GB/en-GB.mod_directorycarousel.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.mod_directorycarousel.sys.ini</language>
+            <language tag="nl-NL">language/nl-NL/nl-NL.mod_directorycarousel.ini</language>
+		<language tag="nl-NL">language/nl-NL/nl-NL.mod_directorycarousel.sys.ini</language>
 	</languages>
     <updateservers>
         <server type="extension" priority="1" name="Directory Carousel">https://github.com/TVBZ/mod_directorycarousel/blob/master/update.xml</server>

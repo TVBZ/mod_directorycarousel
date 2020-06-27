@@ -5,7 +5,7 @@
 		<description>A lightweight carousel module to display images from designated folder.</description>
 		<element>mod_directorycarousel</element>
 		<type>module</type>
-		<version>1.1.0</version>
+		<version>1.1.1</version>
 		<infourl title="Joomla!">https://github.com/TVBZ/mod_directorycarousel</infourl>
 		<downloads>
 			<downloadurl type="full" format="zip">https://github.com/TVBZ/mod_directorycarousel/archive/master.zip</downloadurl>
