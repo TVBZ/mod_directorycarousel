@@ -26,7 +26,7 @@
 		<language tag="nl-NL">language/nl-NL/nl-NL.mod_directorycarousel.sys.ini</language>
 	</languages>
     <updateservers>
-        <server type="extension" priority="1" name="Directory Carousel">https://github.com/TVBZ/mod_directorycarousel/blob/master/update.xml</server>
+        <server type="extension" priority="1" name="Directory Carousel">https://raw.githubusercontent.com/TVBZ/mod_directorycarousel/master/update.xml</server>
     </updateservers>
     <config>
         <fields name="params">
