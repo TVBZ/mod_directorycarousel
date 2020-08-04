@@ -2,7 +2,7 @@
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>MOD_DIRECTORYCAROUSEL</name>
     <description>MOD_DIRECTORYCAROUSEL_DESC</description>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <creationDate>June 2020</creationDate>
     <author>Tom F. Vanbrabant</author>
     <authorEmail>vanbrabant.tom@gmail.com</authorEmail>
@@ -55,8 +55,8 @@
                     default="0" 
                     label="MOD_DIRECTORYCAROUSEL_SORT" 
                     description="MOD_DIRECTORYCAROUSEL_SORT_DESC">
-                     <option value="0">Ascending (A-Z)</option>
-                     <option value="1">Descending (Z-A)</option>
+                     <option value="0">MOD_DIRECTORYCAROUSEL_SORT_OPTION_ASC</option>
+                     <option value="1">MOD_DIRECTORYCAROUSEL_SORT_OPTION_DESC</option>
               </field>
 
               <field 
@@ -295,32 +295,6 @@
                      <option value="1">JYES</option>
                </field>
 
-               <!--
-               <field 
-                     name="pulldrag" 
-                     type="radio" 
-                     required="true"
-                     class="btn-group btn-group-yesno" 
-                     default="1" 
-                     label="MOD_DIRECTORYCAROUSEL_PULLDRAG" 
-                     description="MOD_DIRECTORYCAROUSEL_PULLDRAG_DESC">
-                     <option value="0">JNO</option>
-                     <option value="1">JYES</option>
-               </field>
-
-               <field 
-                     name="freedrag" 
-                     type="radio" 
-                     required="true"
-                     class="btn-group btn-group-yesno" 
-                     default="0" 
-                     label="MOD_DIRECTORYCAROUSEL_FREEDRAG" 
-                     description="MOD_DIRECTORYCAROUSEL_FREEDRAG_DESC">
-                     <option value="0">JNO</option>
-                     <option value="1">JYES</option>
-               </field>
-               -->
-
                <field 
                      name="spacer3"
                      type="spacer"
@@ -329,20 +303,20 @@
 
               <field 
                      name="isresponsive" 
-                     type="radio" 
+                     type="list" 
                      required="true"
-                     class="btn-group btn-group-yesno" 
                      default="0" 
                      label="MOD_DIRECTORYCAROUSEL_RESPONSIVE" 
                      description="MOD_DIRECTORYCAROUSEL_RESPONSIVE_DESC">
-                     <option value="0">JNO</option>
-                     <option value="1">JYES</option>
+                     <option value="0">MOD_DIRECTORYCAROUSEL_RESPONSIVE_OPTION_NOTRESPONSIVE</option>
+                     <option value="json">MOD_DIRECTORYCAROUSEL_RESPONSIVE_OPTION_JSON</option>
+                     <option value="simple">MOD_DIRECTORYCAROUSEL_RESPONSIVE_OPTION_SIMPLE</option>
                </field>
 
               <field 
                      name="responsive" 
                      type="textarea"
-                     default='{"0":{"items":"1"},"400":{"items":"2"}}' 
+                     default="0:1\n300:2\n600:3" 
                      label="MOD_DIRECTORYCAROUSEL_RESPONSIVE_SETTINGS" 
                      description="MOD_DIRECTORYCAROUSEL_RESPONSIVE_SETTINGS_DESC" 
                      cols="50" 
@@ -356,10 +330,9 @@
                      label="MOD_DIRECTORYCAROUSEL_RESPONSIVE_SETTINGS_DOCUMENTATION"
                      type="spacer"
                      hr="false"
-                     showon="isresponsive:1"/>
+                     showon="isresponsive:json"
+              />
 
             </fieldset>
             
-       </fields>
-    </config>
 </extension>

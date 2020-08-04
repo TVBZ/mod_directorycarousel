@@ -8,8 +8,8 @@ Simply download the zip and install it via the native Joomla Extensions Manager,
 
 ### Minimum requirements
 
-* Joomla! 3.8 and higher
-* php 7.1 and above
+* Joomla! 3.5 and higher
+* php 7 and higher
 
 ## Documentation
 
