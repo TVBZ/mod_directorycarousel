@@ -17,11 +17,6 @@ jQuery(document).ready(function () {
         const params = dcModuleSettings[id];
         const target = "#owl-carousel-" + id;
 
-        // Callback to evaluate true/false params
-        function check(parameter) {
-            return params[parameter] === "1";
-        }
-
         // Get responsive settings
         let responsive = {};
         if (params.isresponsive !== "0" && params.responsive !== "") {
@@ -44,23 +39,23 @@ jQuery(document).ready(function () {
         const carouselSettings = {
             items: params.items,
             margin: params.margin,
-            loop: check("loop"),
-            center: check("center"),
-            mouseDrag: check("mousedrag"),
-            touchDrag: check("touchdrag"),
+            loop: (params.loop == 1),
+            center: (params.center == 1),
+            mouseDrag: (params.mousedrag == 1),
+            touchDrag: (params.touchdrag == 1),
             stagePadding: params.stagepadding,
-            autoWidht: check("autowidht"),
-            autoHeight: check("autoheight"),
+            autoWidht: (params.autowidht == 1),
+            autoHeight: (params.autoheight == 1),
             startPosition: params.startposition - 1,
-            nav: check("nav"),
-            rewind: check("rewind"),
+            nav: (params.nav == 1),
+            rewind: (params.rewind == 1),
             slideBy: params.slideby,
-            dots: check("dots"),
-            lazyLoad: check("lazyload"),
-            autoplay: check("autoplay"),
+            dots: (params.dots == 1),
+            lazyLoad: (params.lazyload == 1),
+            autoplay: (params.autoplay == 1),
             smartSpeed: params.smartspeed,
             autoplayTimeout: params.autoplaytimeout,
-            autoplayHoverPause: check("autoplayhoverpause"),
+            autoplayHoverPause: (params.autoplayhoverpause == 1),
             responsive
         };
 
