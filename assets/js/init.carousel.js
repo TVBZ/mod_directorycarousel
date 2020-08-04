@@ -20,23 +20,25 @@ jQuery(document).ready(function () {
         // Callback to evaluate true/false params
         function check(parameter) {
             return params[parameter] === "1";
-        };
+        }
 
         // Get responsive settings
         let responsive = {};
-        if (params["isresponsive"] !== "0" && params["responsive"] !== "") {
-            if (params["isresponsive"] === "json") { // parse settings as JSON
-                responsive = JSON.parse(params["responsive"]);
-            } else if (params["isresponsive"] === "simple") { // use simplified settings
-                const settings = params["responsive"].split("\n");
-                for (line of settings) {
+        if (params.isresponsive !== "0" && params.responsive !== "") {
+            if (params.isresponsive === "json") { // parse settings as JSON
+                responsive = JSON.parse(params.responsive);
+            } else if (params.isresponsive === "simple") { // use simplified settings
+                const settings = params.responsive.split("\n");
+                for (const line of settings) {
                     const splitSettings = line.split(":"),
                         viewport = splitSettings[0],
                         value = Number(splitSettings[1]);
-                    responsive[viewport] = {items: value};
-                };
-            };
-        };
+                    responsive[viewport] = {
+                        items: value
+                    };
+                }
+            }
+        }
 
         // Initialize carousel
         const carouselSettings = {
@@ -64,8 +66,8 @@ jQuery(document).ready(function () {
 
         // console.log(carouselSettings);
         jQuery(target).owlCarousel(carouselSettings);
-        console.log(target + " initialized.")
+        console.log(target + " initialized.");
 
-    };
+    }
 
 });

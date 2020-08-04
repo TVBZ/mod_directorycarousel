@@ -21,7 +21,7 @@ $document->addStyleSheet(Uri::root(true)."/modules/mod_directorycarousel/assets/
 $document->addStyleSheet(Uri::root(true)."/modules/mod_directorycarousel/assets/css/owl.theme.default.min.css");
 
 $document->addScript(Uri::root(true)."/modules/mod_directorycarousel/assets/js/owl.carousel.min.js","text/javascript", true, false);
-$document->addScript(Uri::root(true)."/modules/mod_directorycarousel/assets/js/init.carousel.js","text/javascript", true, false);
+$document->addScript(Uri::root(true)."/modules/mod_directorycarousel/assets/js/init.carousel.min.js","text/javascript", true, false);
 
 ?>
 

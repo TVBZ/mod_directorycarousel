@@ -2,7 +2,7 @@
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>MOD_DIRECTORYCAROUSEL</name>
     <description>MOD_DIRECTORYCAROUSEL_DESC</description>
-    <version>1.1.6</version>
+    <version>1.2.0</version>
     <creationDate>June 2020</creationDate>
     <author>Tom F. Vanbrabant</author>
     <authorEmail>vanbrabant.tom@gmail.com</authorEmail>
