@@ -2,7 +2,7 @@
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>MOD_DIRECTORYCAROUSEL</name>
     <description>MOD_DIRECTORYCAROUSEL_DESC</description>
-    <version>1.1.4</version>
+    <version>1.1.5</version>
     <creationDate>June 2020</creationDate>
     <author>Tom F. Vanbrabant</author>
     <authorEmail>vanbrabant.tom@gmail.com</authorEmail>
@@ -316,13 +316,13 @@
               <field 
                      name="responsive" 
                      type="textarea"
-                     default="0:1\n300:2\n600:3" 
+                     default="200:2" 
                      label="MOD_DIRECTORYCAROUSEL_RESPONSIVE_SETTINGS" 
                      description="MOD_DIRECTORYCAROUSEL_RESPONSIVE_SETTINGS_DESC" 
                      cols="50" 
                      rows="10"
                      filter="string" 
-                     showon="isresponsive:json[OR]isresponsive:simply"
+                     showon="isresponsive:json[OR]isresponsive:simple"
               />
 
               <field 
