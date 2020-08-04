@@ -24,10 +24,10 @@ jQuery(document).ready(function () {
 
         // Get responsive settings
         let responsive = {};
-        if (params["isresponsive"] === "1" && params["responsive"] !== "") {
-            if (true) { // parse settings as JSON
+        if (params["isresponsive"] !== "0" && params["responsive"] !== "") {
+            if (params["isresponsive" === "json"]) { // parse settings as JSON
                 responsive = JSON.parse(params["responsive"]);
-            } else { // use simplified settings
+            } else if (params["isresponsive" === "simple") { // use simplified settings
                 const settings = params["responsive"].split("\n");
                 for (line of settings) {
                     const splitSettings = line.split(":"),
